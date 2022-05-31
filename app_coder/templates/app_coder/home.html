@@ -2,20 +2,20 @@
 {% load static %}
 {% block contenidoQueCambia %}
 
-<h2>Buscador de cursos</h2>
+<h2>Buscador de productos</h2>
 <hr></hr>
 
 <form action="/app_coder/search" method="GET">
     <div>
-        <input type="text" name="text_search" id="course_name" placeholder="Busqueda por nommbre">
+        <input type="text" name="text_search" id="product_name" placeholder="Busqueda por nommbre">
         <input type="submit" value="Buscar por Nombre">
     </div>
     <div>
-        <input type="number" name="code_search" id="course_code" placeholder="Busqueda por camada">
-        <input type="submit" value="Buscar por camada">
+        <input type="number" name="code_search" id="product_code" placeholder="Busqueda por ID">
+        <input type="submit" value="Buscar por ID">
     </div>
     <div>
-        <input type="text" name="all_search" id="course_code_or_name" placeholder="Busqueda general">
+        <input type="text" name="all_search" id="product_code_or_name" placeholder="Busqueda general">
         <input type="submit" value="Buscar">
     </div>
 
@@ -23,12 +23,12 @@
 
 <hr></hr>
 
-{% if courses %}
+{% if products %}
     <ul>
-        {% for course in courses %}
+        {% for product in products %}
             <li>
-                Curso: {{course.name}}
-                -- Camada: {{course.code}}
+                Product: {{product.name}}
+                -- ID: {{product.code}}
             </li>
         {% endfor %}
     </ul>

@@ -1,0 +1,22 @@
+{% extends "app_coder/index.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+<h2>Formulario para ingresar un producto nuevo</h2>
+<hr></hr>
+{% if product_form.errors %}
+    <p style="color: red">Por favor ingresa bien los datos, están mal</p>
+{% endif %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+    <table>
+        {{ product_form.as_table }}
+    </table>
+
+    <input type="submit" class="btn btn-primary" value="ingresar producto" />
+
+</form>
+
+{% endblock %}

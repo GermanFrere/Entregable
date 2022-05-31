@@ -2,8 +2,8 @@
 {% load static %}
 {% block contenidoQueCambia %}
 
-<h2>Lista de Entregables</h2>
-<a class="card_custom" href="{% url 'HomeworkDjangoForms' %}">Crear nueva Entrega</a>
+<h2>Lista de Pedidos</h2>
+<a class="card_custom" href="{% url 'HomeworkDjangoForms' %}">Crear un nuevo Pedido</a>
 <hr></hr>
 <ul>
     {% for homework in homeworks %}

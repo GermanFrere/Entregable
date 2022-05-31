@@ -1,0 +1,18 @@
+{% extends "app_coder/index.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+<h2>Lista de Empleados</h2>
+<a class="card_custom" href="{% url 'EmployeeDjangoForms' %}">Crear nuevo Empleado</a>
+<hr></hr>
+<ul>
+    {% for employee in Employees %}
+        <li>
+            Employee: {{employee.name}} {{employee.last_name}}
+            -- e-mail: {{employee.email}}
+            -- Profesión: {{employee.profession}}
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

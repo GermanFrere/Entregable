@@ -1,18 +1,13 @@
 from django.db import models
 
 
-class Course(models.Model):
+class Product(models.Model):
     name = models.CharField(max_length=40)
     code = models.IntegerField()
 
 
-class Student(models.Model):
-    name = models.CharField(max_length=40)
-    last_name = models.CharField(max_length=40)
-    email = models.EmailField()
 
-
-class Profesor(models.Model):
+class Employee(models.Model):
     name = models.CharField(max_length=40)
     last_name = models.CharField(max_length=40)
     email = models.EmailField()
